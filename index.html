@@ -8,52 +8,75 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <span class="logo-text text-gold">The Long Story.</span>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress-container">
+        <div id="scroll-progress"></div>
+    </div>
+
+    <!-- Floating Sticky CTA -->
+    <a href="tel:08940497405" class="floating-cta glow-effect">
+        <i class="fas fa-phone-alt"></i>
+        <span>Call Now – 089404 97405</span>
+    </a>
+
     <!-- Navbar -->
-    <header class="navbar" id="navbar">
+    <header class="navbar glass-effect" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">The Long Story.</a>
+            <a href="#" class="logo">The Long Story<span class="text-gold">.</span></a>
             <nav class="nav-links">
-                <a href="#about">About</a>
+                <a href="#about">The Story</a>
                 <a href="#experience">Experience</a>
                 <a href="#menu">Menu</a>
                 <a href="#gallery">Gallery</a>
             </nav>
-            <a href="#reservation" class="btn btn-primary d-none-mobile">Reserve Now</a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <a href="#reservation" class="btn btn-primary d-none-mobile glow-hover">Reserve a Table</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <!-- Mobile Nav -->
-        <div class="mobile-nav" id="mobile-nav">
-            <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#experience" class="mobile-link">Experience</a>
-            <a href="#menu" class="mobile-link">Menu</a>
-            <a href="#gallery" class="mobile-link">Gallery</a>
-            <a href="#reservation" class="btn btn-primary mt-2">Reserve Now</a>
+        <div class="mobile-nav glass-panel" id="mobile-nav">
+            <button class="close-menu-btn" id="close-menu-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+            <div class="mobile-nav-content">
+                <a href="#about" class="mobile-link">The Story</a>
+                <a href="#experience" class="mobile-link">Experience</a>
+                <a href="#menu" class="mobile-link">Menu</a>
+                <a href="#gallery" class="mobile-link">Gallery</a>
+                <a href="#reservation" class="mobile-link">Reservations</a>
+            </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section fade-in">
+        <section id="hero" class="hero-section parallax">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
-                <h1 class="hero-title">Where Every Meal<br>Becomes a Story</h1>
-                <p class="hero-subtitle">Premium restobar in Avinashi serving bold flavours, crafted drinks, and unforgettable vibes.</p>
-                <div class="hero-buttons">
-                    <a href="#reservation" class="btn btn-primary">Reserve a Table</a>
-                    <a href="#menu" class="btn btn-outline">View Menu</a>
+                <h1 class="hero-title reveal-text">Where Every Meal<br><span class="text-gold">Becomes a Story</span></h1>
+                <p class="hero-subtitle reveal-delay-1">Premium restobar in Avinashi serving bold flavours, crafted drinks, and unforgettable vibes.</p>
+                <div class="hero-buttons reveal-delay-2">
+                    <a href="#reservation" class="btn btn-primary btn-large glow-hover">Reserve a Table</a>
+                    <a href="#menu" class="btn btn-outline btn-large">View Menu</a>
                 </div>
                 
-                <div class="trust-indicators">
+                <div class="trust-indicators reveal-delay-3 glass-panel-subtle">
                     <div class="trust-item">
                         <i class="fas fa-star text-gold"></i>
                         <span><strong>4.1</strong> Rating</span>
@@ -62,11 +85,11 @@
                         <i class="fas fa-receipt text-gold"></i>
                         <span><strong>571+</strong> Reviews</span>
                     </div>
-                    <div class="trust-item">
+                    <div class="trust-item d-none-small">
                         <i class="fas fa-utensils text-gold"></i>
                         <span>Dine-in</span>
                     </div>
-                    <div class="trust-item">
+                    <div class="trust-item d-none-small">
                         <i class="fas fa-car text-gold"></i>
                         <span>Drive-through</span>
                     </div>
@@ -75,171 +98,244 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about-section slide-up">
+        <section id="about" class="about-section">
             <div class="container about-container">
-                <div class="about-text">
-                    <h2 class="section-title">The Story Begins Here</h2>
+                <div class="about-text slide-right fade-in-scroll">
+                    <span class="subtitle">The Beginning</span>
+                    <h2 class="section-title">More Than Just Food</h2>
+                    <div class="title-divider left"></div>
                     <p class="storytelling-text">
-                        "At The Long Story, dining is more than just food — it’s an experience. From carefully crafted dishes to a vibrant ambience designed for memories, every visit turns into a story worth sharing."
+                        "At The Long Story, dining is more than just food — it’s an experience. From carefully crafted dishes to a vibrant ambience designed for unforgettable moments, every visit becomes a story worth sharing."
                     </p>
-                    <ul class="highlight-points">
-                        <li><i class="fas fa-check text-gold"></i> Premium aesthetic ambience</li>
-                        <li><i class="fas fa-check text-gold"></i> Flavour-packed multi-cuisine menu</li>
-                        <li><i class="fas fa-check text-gold"></i> Ideal for friends, dates & celebrations</li>
-                        <li><i class="fas fa-check text-gold"></i> Instagram-worthy interiors</li>
-                    </ul>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fas fa-glass-cheers"></i></span>
+                            <div>
+                                <h4>Premium Vibes</h4>
+                                <p>Aesthetic ambience for the perfect evening.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fas fa-fire-burner"></i></span>
+                            <div>
+                                <h4>Bold Flavours</h4>
+                                <p>Multi-cuisine masterpieces crafted with passion.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-image-wrapper img-reveal">
-                    <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="The Long Story Interior" class="about-image" id="img-about">
-                    <div class="gold-border"></div>
+                <div class="about-image-wrapper img-reveal slide-left fade-in-scroll">
+                    <div class="image-stack">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="Premium Interior" class="img-back">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Crafted Drinks" class="img-front shadow-premium">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Signature Experience Section -->
-        <section id="experience" class="experience-section">
-            <div class="container">
-                <div class="section-header text-center slide-up">
-                    <span class="subtitle">Our offerings</span>
-                    <h2 class="section-title">Signature Experience</h2>
+        <section id="experience" class="experience-section parallax">
+            <div class="experience-overlay"></div>
+            <div class="container position-relative">
+                <div class="section-header text-center slide-up fade-in-scroll">
+                    <span class="subtitle">Feel the energy</span>
+                    <h2 class="section-title">The Signature Experience</h2>
                     <div class="title-divider"></div>
                 </div>
                 
-                <div class="experience-grid">
-                    <div class="experience-card card-hover-fx slide-up">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop" alt="Flavour Packed Dishes" id="img-exp-1">
-                        </div>
-                        <div class="card-content">
-                            <h3>Flavour Packed Dishes</h3>
-                            <p>Culinary masterpieces blending rich traditions with modern global twists.</p>
+                <div class="experience-cards">
+                    <div class="premium-card slide-up fade-in-scroll">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Flavour Packed Dishes" class="card-bg">
+                        <div class="card-glass-content">
+                            <h3>🍗 Flavour Packed Dishes</h3>
+                            <p>Culinary masterpieces blending rich traditions with bold, modern twists.</p>
                         </div>
                     </div>
-                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.1s;">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Crafted Beverages" id="img-exp-2">
-                        </div>
-                        <div class="card-content">
-                            <h3>Crafted Beverages</h3>
+                    
+                    <div class="premium-card slide-up fade-in-scroll" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Crafted Beverages" class="card-bg">
+                        <div class="card-glass-content">
+                            <h3>🍹 Crafted Beverages</h3>
                             <p>Artisanal mixes, fine spirits, and signature cocktails to elevate the night.</p>
                         </div>
                     </div>
-                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.2s;">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=1000&auto=format&fit=crop" alt="Nightlife Vibe" id="img-exp-3">
-                        </div>
-                        <div class="card-content">
-                            <h3>Nightlife Vibe</h3>
+                    
+                    <div class="premium-card slide-up fade-in-scroll" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=800&auto=format&fit=crop" alt="Nightlife Vibe" class="card-bg">
+                        <div class="card-glass-content">
+                            <h3>🎶 Nightlife Atmosphere</h3>
                             <p>Pulsating energy, curated music, and a lively crowd keeping the story going.</p>
                         </div>
                     </div>
-                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.3s;">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="Photo-worthy Interiors" id="img-exp-4">
-                        </div>
-                        <div class="card-content">
-                            <h3>Photo-worthy Interiors</h3>
-                            <p>Aesthetic design elements creating the perfect backdrop for your memories.</p>
+                    
+                    <div class="premium-card slide-up fade-in-scroll" style="transition-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=800&auto=format&fit=crop" alt="Instagram-Worthy Interiors" class="card-bg">
+                        <div class="card-glass-content">
+                            <h3>📸 Instagram-Worthy Interiors</h3>
+                            <p>Aesthetic design elements creating the perfect luxurious backdrop for your memories.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Menu Preview Section -->
-        <section id="menu" class="menu-section slide-up">
-            <div class="container menu-container">
-                <div class="section-header text-center">
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header text-center slide-up fade-in-scroll">
                     <span class="subtitle">Taste the Magic</span>
                     <h2 class="section-title">Menu Highlights</h2>
                     <div class="title-divider"></div>
                 </div>
                 
-                <div class="menu-categories">
-                    <div class="menu-category">
-                        <h3>Starters</h3>
-                        <p class="category-desc">Kickoff your story with our tantalizing appetizers.</p>
-                        <ul class="menu-list">
-                            <li><span>Truffle Mushroom Arancini</span> <span class="dots"></span> <span class="text-gold">₹345</span></li>
-                            <li><span>Spicy Peri Peri Wings</span> <span class="dots"></span> <span class="text-gold">₹395</span></li>
-                            <li><span>Guntur Chilli Paneer</span> <span class="dots"></span> <span class="text-gold">₹320</span></li>
-                        </ul>
+                <div class="menu-tabs-container slide-up fade-in-scroll">
+                    <div class="menu-tabs">
+                        <button class="menu-tab active" data-target="starters">Starters</button>
+                        <button class="menu-tab" data-target="mains">Main Course</button>
+                        <button class="menu-tab" data-target="beverages">Beverages</button>
                     </div>
-                    <div class="menu-category">
-                        <h3>Main Course</h3>
-                        <p class="category-desc">A symphony of hearty and satisfying flavours.</p>
-                        <ul class="menu-list">
-                            <li><span>Chettinad Chicken Risotto</span> <span class="dots"></span> <span class="text-gold">₹520</span></li>
-                            <li><span>Signature Woodfire Pizza</span> <span class="dots"></span> <span class="text-gold">₹480</span></li>
-                            <li><span>Slow-Cooked Mutton Rogan Josh</span> <span class="dots"></span> <span class="text-gold">₹610</span></li>
-                        </ul>
+                    
+                    <div class="menu-content-area glass-panel">
+                        <!-- Starters -->
+                        <div class="menu-pane active fade-in" id="starters">
+                            <ul class="premium-menu-list">
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Truffle Mushroom Arancini</h4>
+                                        <p>Crispy risotto balls, wild mushrooms, truffle oil</p>
+                                    </div>
+                                    <div class="menu-item-price">₹345</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Spicy Peri Peri Wings</h4>
+                                        <p>Smoked wings tossed in house secret peri peri sauce</p>
+                                    </div>
+                                    <div class="menu-item-price">₹395</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Guntur Chilli Paneer</h4>
+                                        <p>Cottage cheese fused with authentic Guntur spices</p>
+                                    </div>
+                                    <div class="menu-item-price">₹320</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Mains -->
+                        <div class="menu-pane fade-in" id="mains">
+                            <ul class="premium-menu-list">
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Chettinad Chicken Risotto</h4>
+                                        <p>Italian arborio rice meets bold South Indian flavours</p>
+                                    </div>
+                                    <div class="menu-item-price">₹520</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Signature Woodfire Pizza</h4>
+                                        <p>Hand-tossed base, san marzano, burrata, basil</p>
+                                    </div>
+                                    <div class="menu-item-price">₹480</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Slow-Cooked Mutton Rogan Josh</h4>
+                                        <p>Tender Kashmiri style mutton curry with rich spices</p>
+                                    </div>
+                                    <div class="menu-item-price">₹610</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Beverages -->
+                        <div class="menu-pane fade-in" id="beverages">
+                            <ul class="premium-menu-list">
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>The Golden Elixir (Signature)</h4>
+                                        <p>Premium gin, saffron infusion, elderflower</p>
+                                    </div>
+                                    <div class="menu-item-price">₹450</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Smoked Whiskey Sour</h4>
+                                        <p>Bourbon, fresh citrus, aromatic bitters, applewood smoke</p>
+                                    </div>
+                                    <div class="menu-item-price">₹550</div>
+                                </li>
+                                <li>
+                                    <div class="menu-item-info">
+                                        <h4>Berry Blast Mocktail</h4>
+                                        <p>Mixed berries, mint, lime, sparkling water</p>
+                                    </div>
+                                    <div class="menu-item-price">₹280</div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="menu-category">
-                        <h3>Beverages</h3>
-                        <p class="category-desc">Sip into the mood with our crafted drinks.</p>
-                        <ul class="menu-list">
-                            <li><span>The Golden Elixir (Signature)</span> <span class="dots"></span> <span class="text-gold">₹450</span></li>
-                            <li><span>Smoked Whiskey Sour</span> <span class="dots"></span> <span class="text-gold">₹550</span></li>
-                            <li><span>Berry Blast Mocktail</span> <span class="dots"></span> <span class="text-gold">₹280</span></li>
-                        </ul>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#" class="btn btn-outline glow-hover">Explore Full Menu</a>
                     </div>
-                </div>
-                
-                <div class="text-center mt-4">
-                    <a href="#" class="btn btn-outline">Explore Full Menu</a>
                 </div>
             </div>
         </section>
 
-        <!-- Reviews / Social Proof -->
-        <section id="reviews" class="reviews-section">
-            <div class="container">
-                <div class="reviews-header slide-up">
-                    <div class="rating-box">
+        <!-- Social Proof Section -->
+        <section id="reviews" class="social-proof-section parallax">
+            <div class="reviews-overlay"></div>
+            <div class="container position-relative">
+                <div class="section-header text-center slide-up fade-in-scroll">
+                    <span class="subtitle">Word of Mouth</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="stats-banner glass-panel slide-up fade-in-scroll">
+                    <div class="stat-item">
                         <div class="stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
                         <h3>4.1 / 5</h3>
-                        <p>Based on 571+ Reviews</p>
+                        <p>Google Rating</p>
                     </div>
-                    <div class="reviews-title text-center">
-                        <h2 class="section-title">What Our Guests Say</h2>
-                        <div class="title-divider"></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">571+</div>
+                        <h3>Happy Guests</h3>
+                        <p>Total Reviews</p>
                     </div>
                 </div>
                 
-                <div class="testimonials-grid slide-up">
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"Yummy food & cool atmosphere. Express service. Definitely coming back with more friends."</p>
-                        <div class="reviewer">
-                            <div class="avatar">S</div>
-                            <div class="reviewer-info">
-                                <h4>Sanjay K.</h4>
-                                <span>Local Guide</span>
-                            </div>
+                <div class="testimonials-deck mt-5 slide-up fade-in-scroll">
+                    <div class="testimonial-card glass-panel shadow-premium">
+                        <div class="quote-mark text-gold">"</div>
+                        <p class="review-text">Yummy food & cool atmosphere. Express service. Definitely coming back with more friends.</p>
+                        <div class="reviewer-meta">
+                            <h4>— Sanjay K.</h4>
+                            <span class="text-muted">Local Guide</span>
                         </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"Ambience matches metro city vibes. A much-needed high-end premium spot in Avinashi!"</p>
-                        <div class="reviewer">
-                            <div class="avatar">P</div>
-                            <div class="reviewer-info">
-                                <h4>Priya R.</h4>
-                                <span>Food Blogger</span>
-                            </div>
+                    
+                    <div class="testimonial-card glass-panel shadow-premium">
+                        <div class="quote-mark text-gold">"</div>
+                        <p class="review-text">Ambience matches metro city vibes. A much-needed high-end premium spot in Avinashi!</p>
+                        <div class="reviewer-meta">
+                            <h4>— Priya R.</h4>
+                            <span class="text-muted">Food Blogger</span>
                         </div>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="review-text">"Every dish was beautifully presented and full of flavour. The signature cocktails are a must-try."</p>
-                        <div class="reviewer">
-                            <div class="avatar">V</div>
-                            <div class="reviewer-info">
-                                <h4>Vikram M.</h4>
-                                <span>Regular Guest</span>
-                            </div>
+                    
+                    <div class="testimonial-card glass-panel shadow-premium">
+                        <div class="quote-mark text-gold">"</div>
+                        <p class="review-text">Every dish was beautifully presented and full of flavour. The signature cocktails are a must-try.</p>
+                        <div class="reviewer-meta">
+                            <h4>— Vikram M.</h4>
+                            <span class="text-muted">Regular Guest</span>
                         </div>
                     </div>
                 </div>
@@ -249,114 +345,125 @@
         <!-- Gallery Section -->
         <section id="gallery" class="gallery-section">
             <div class="container">
-                <div class="section-header text-center slide-up">
+                <div class="section-header text-center slide-up fade-in-scroll">
                     <span class="subtitle">Visual Story</span>
-                    <h2 class="section-title">Glimpses of The Long Story</h2>
+                    <h2 class="section-title">A Glimpse Inside</h2>
                     <div class="title-divider"></div>
                 </div>
                 
-                <div class="gallery-grid">
-                    <div class="gallery-item slide-up">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop" alt="Food at The Long Story" id="img-gal-1">
-                        <div class="gallery-caption"><h3>Food</h3></div>
+                <div class="masonry-gallery slide-up fade-in-scroll">
+                    <div class="masonry-item item-tall">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=800&auto=format&fit=crop" alt="Luxury Interior">
+                        <div class="masonry-overlay"><span>Ambience</span></div>
                     </div>
-                    <div class="gallery-item slide-up" style="transition-delay: 0.1s;">
-                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Drinks at The Long Story" id="img-gal-2">
-                        <div class="gallery-caption"><h3>Drinks</h3></div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Premium Dish">
+                        <div class="masonry-overlay"><span>Food</span></div>
                     </div>
-                    <div class="gallery-item slide-up" style="transition-delay: 0.2s;">
-                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="Ambience at The Long Story" id="img-gal-3">
-                        <div class="gallery-caption"><h3>Ambience</h3></div>
+                    <div class="masonry-item item-wide">
+                        <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=1200&auto=format&fit=crop" alt="Nightlife Vibe">
+                        <div class="masonry-overlay"><span>Nightlife</span></div>
                     </div>
-                    <div class="gallery-item slide-up" style="transition-delay: 0.3s;">
-                        <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=1000&auto=format&fit=crop" alt="Night Vibe at The Long Story" id="img-gal-4">
-                        <div class="gallery-caption"><h3>Night Vibe</h3></div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Cocktail">
+                        <div class="masonry-overlay"><span>Drinks</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Reservation Section -->
-        <section id="reservation" class="reservation-section">
-            <div class="container reservation-container slide-up">
-                <div class="reservation-content">
-                    <h2 class="section-title">Reserve Your Table Now</h2>
-                    <p>Experience the finest dining in Avinashi. Book ahead to secure your spot for a memorable story.</p>
-                    
-                    <div class="contact-info-large">
-                        <i class="fas fa-phone-alt text-gold"></i>
-                        <span>089404 97405</span>
+        <section id="reservation" class="reservation-section parallax">
+            <div class="reservation-overlay"></div>
+            <div class="container relative z-index-2">
+                <div class="reservation-grid slide-up fade-in-scroll">
+                    <!-- CTA Info -->
+                    <div class="res-info-box glass-panel-heavy shadow-premium">
+                        <h2 class="section-title">Reserve Your Table Now</h2>
+                        <div class="title-divider left"></div>
+                        <p class="mb-4">Experience the finest dining in Avinashi. Book ahead to secure your spot for an unforgettable narrative of tastes and sensations.</p>
+                        
+                        <div class="direct-call mt-5">
+                            <p class="text-muted text-uppercase mb-2 text-sm tracking-wide">Prefer to call?</p>
+                            <a href="tel:08940497405" class="call-number-large glow-text">
+                                <i class="fas fa-phone-alt"></i> 089404 97405
+                            </a>
+                            <div class="mt-4">
+                                <a href="tel:08940497405" class="btn btn-primary glow-hover">Call Now</a>
+                            </div>
+                        </div>
                     </div>
                     
-                    <a href="tel:08940497405" class="btn btn-primary btn-large">Call Now to Reserve</a>
-                </div>
-                
-                <div class="reservation-form-wrapper">
-                    <h3>Request a Booking</h3>
-                    <form class="reservation-form" id="resForm" onsubmit="event.preventDefault(); alert('Booking Request Sent!');">
-                        <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="date" required>
+                    <!-- Form -->
+                    <div class="res-form-wrapper">
+                        <form class="premium-form glass-panel shadow-premium glow-border" id="bookingForm">
+                            <h3 class="form-title text-center text-gold mb-4">Request a Booking</h3>
+                            <div class="form-group slide-in-bottom">
+                                <input type="text" class="form-control" placeholder="Full Name" required>
                             </div>
-                            <div class="form-group">
-                                <input type="time" required>
+                            <div class="form-group slide-in-bottom" style="transition-delay: 0.1s;">
+                                <input type="tel" class="form-control" placeholder="Phone Number" required>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>Number of Guests</option>
-                                <option value="1">1 Person</option>
-                                <option value="2">2 People</option>
-                                <option value="3">3 People</option>
-                                <option value="4">4 People</option>
-                                <option value="5">5+ People</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Confirm Request</button>
-                    </form>
+                            <div class="form-row slide-in-bottom" style="transition-delay: 0.2s;">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="time" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group slide-in-bottom" style="transition-delay: 0.3s;">
+                                <select class="form-control" required>
+                                    <option value="" disabled selected>Guests</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                            <div class="mt-4 slide-in-bottom" style="transition-delay: 0.4s;">
+                                <button type="submit" class="btn btn-primary btn-block btn-large glow-hover">Confirm Request</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Location & Details Section -->
-        <section id="location" class="location-section slide-up">
+        <!-- Location Section -->
+        <section id="location" class="location-section">
             <div class="container">
-                <div class="location-grid">
+                <div class="location-container glass-panel shadow-premium slide-up fade-in-scroll">
                     <div class="location-details">
-                        <h2 class="section-title">Visit Us</h2>
-                        <div class="title-divider left"></div>
+                        <span class="subtitle">Find Us</span>
+                        <h2 class="section-title">Location & Hours</h2>
                         
-                        <div class="info-block">
-                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="info-text">
+                        <div class="detail-group mt-4">
+                            <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
                                 <h4>Address</h4>
-                                <p>Velaythapalayam, 272/2 Pirivu, Komarapalayam, Avinashi, Tamil Nadu – 641654</p>
+                                <p class="text-muted">Velaythapalayam, 272/2 Pirivu, Komarapalayam,<br>Avinashi, Tamil Nadu – 641654</p>
                             </div>
                         </div>
                         
-                        <div class="info-block">
-                            <div class="info-icon"><i class="fas fa-clock"></i></div>
-                            <div class="info-text">
-                                <h4>Timings</h4>
-                                <p>Open Daily | Closes at 11 PM</p>
+                        <div class="detail-group mt-4">
+                            <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Timing</h4>
+                                <p class="text-muted">Open Daily | Closes at 11 PM</p>
                             </div>
                         </div>
                         
-                        <div class="features-tags">
-                            <span class="tag"><i class="fas fa-utensils"></i> Dine-in available</span>
-                            <span class="tag"><i class="fas fa-car-side"></i> Drive-through available</span>
-                            <span class="tag x-tag"><i class="fas fa-ban"></i> No delivery</span>
+                        <div class="feature-badges mt-5">
+                            <span class="badge badge-success"><i class="fas fa-check"></i> Dine-in</span>
+                            <span class="badge badge-success"><i class="fas fa-check"></i> Drive-through</span>
+                            <span class="badge badge-danger"><i class="fas fa-times"></i> No delivery</span>
                         </div>
                     </div>
                     
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3ba8cf702d7eb419%3A0xe5a3c18b76ce845b!2sAvinashi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3ba8cf702d7eb419%3A0xe5a3c18b76ce845b!2sAvinashi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -365,48 +472,44 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-grid">
+        <div class="container footer-content slide-up fade-in-scroll">
             <div class="footer-brand">
-                <a href="#" class="logo text-gold">The Long Story.</a>
-                <p>Where every meal becomes a story. A premium lifestyle dining and nightlife destination.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="logo">The Long Story<span class="text-gold">.</span></a>
+                <p class="mt-3 text-muted">A premium lifestyle dining destination designed for memories and curated experiences.</p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#about">About Story</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#menu">Menu Highlights</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#reservation">Reservations</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fas fa-phone text-gold"></i> 089404 97405</li>
-                    <li><i class="fas fa-envelope text-gold"></i> hello@thelongstory.com</li>
-                    <li><i class="fas fa-map-marker-alt text-gold"></i> Avinashi, Tamil Nadu 641654</li>
-                </ul>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">The Story</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-list">
+                        <li><span class="text-gold"><i class="fas fa-phone"></i></span> 089404 97405</li>
+                        <li><span class="text-gold"><i class="fas fa-envelope"></i></span> hello@thelongstory.com</li>
+                        <li><span class="text-gold"><i class="fas fa-map-marker-alt"></i></span> Avinashi, TN 641654</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 The Long Story. All Rights Reserved.</p>
+            <div class="container text-center">
+                <p class="text-muted text-sm">&copy; 2026 The Long Story. All Rights Reserved. Crafted for excellence.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-sticky-cta">
-        <a href="#reservation" class="btn btn-primary d-block text-center">Reserve Now</a>
-    </div>
 
     <script src="script.js"></script>
 </body>
