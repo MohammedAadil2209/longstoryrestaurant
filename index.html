@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Long Story - Premium restobar in Avinashi. Enjoy bold flavours, crafted drinks, and unforgettable vibes in an aesthetic ambience.">
+    <title>The Long Story | Premium Restobar in Avinashi</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">The Long Story.</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+            </nav>
+            <a href="#reservation" class="btn btn-primary d-none-mobile">Reserve Now</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#reservation" class="btn btn-primary mt-2">Reserve Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section fade-in">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title">Where Every Meal<br>Becomes a Story</h1>
+                <p class="hero-subtitle">Premium restobar in Avinashi serving bold flavours, crafted drinks, and unforgettable vibes.</p>
+                <div class="hero-buttons">
+                    <a href="#reservation" class="btn btn-primary">Reserve a Table</a>
+                    <a href="#menu" class="btn btn-outline">View Menu</a>
+                </div>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-star text-gold"></i>
+                        <span><strong>4.1</strong> Rating</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-receipt text-gold"></i>
+                        <span><strong>571+</strong> Reviews</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-utensils text-gold"></i>
+                        <span>Dine-in</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-car text-gold"></i>
+                        <span>Drive-through</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section slide-up">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2 class="section-title">The Story Begins Here</h2>
+                    <p class="storytelling-text">
+                        "At The Long Story, dining is more than just food — it’s an experience. From carefully crafted dishes to a vibrant ambience designed for memories, every visit turns into a story worth sharing."
+                    </p>
+                    <ul class="highlight-points">
+                        <li><i class="fas fa-check text-gold"></i> Premium aesthetic ambience</li>
+                        <li><i class="fas fa-check text-gold"></i> Flavour-packed multi-cuisine menu</li>
+                        <li><i class="fas fa-check text-gold"></i> Ideal for friends, dates & celebrations</li>
+                        <li><i class="fas fa-check text-gold"></i> Instagram-worthy interiors</li>
+                    </ul>
+                </div>
+                <div class="about-image-wrapper img-reveal">
+                    <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="The Long Story Interior" class="about-image" id="img-about">
+                    <div class="gold-border"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header text-center slide-up">
+                    <span class="subtitle">Our offerings</span>
+                    <h2 class="section-title">Signature Experience</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="experience-grid">
+                    <div class="experience-card card-hover-fx slide-up">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop" alt="Flavour Packed Dishes" id="img-exp-1">
+                        </div>
+                        <div class="card-content">
+                            <h3>Flavour Packed Dishes</h3>
+                            <p>Culinary masterpieces blending rich traditions with modern global twists.</p>
+                        </div>
+                    </div>
+                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.1s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Crafted Beverages" id="img-exp-2">
+                        </div>
+                        <div class="card-content">
+                            <h3>Crafted Beverages</h3>
+                            <p>Artisanal mixes, fine spirits, and signature cocktails to elevate the night.</p>
+                        </div>
+                    </div>
+                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.2s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=1000&auto=format&fit=crop" alt="Nightlife Vibe" id="img-exp-3">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nightlife Vibe</h3>
+                            <p>Pulsating energy, curated music, and a lively crowd keeping the story going.</p>
+                        </div>
+                    </div>
+                    <div class="experience-card card-hover-fx slide-up" style="transition-delay: 0.3s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="Photo-worthy Interiors" id="img-exp-4">
+                        </div>
+                        <div class="card-content">
+                            <h3>Photo-worthy Interiors</h3>
+                            <p>Aesthetic design elements creating the perfect backdrop for your memories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Preview Section -->
+        <section id="menu" class="menu-section slide-up">
+            <div class="container menu-container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Taste the Magic</span>
+                    <h2 class="section-title">Menu Highlights</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="menu-category">
+                        <h3>Starters</h3>
+                        <p class="category-desc">Kickoff your story with our tantalizing appetizers.</p>
+                        <ul class="menu-list">
+                            <li><span>Truffle Mushroom Arancini</span> <span class="dots"></span> <span class="text-gold">₹345</span></li>
+                            <li><span>Spicy Peri Peri Wings</span> <span class="dots"></span> <span class="text-gold">₹395</span></li>
+                            <li><span>Guntur Chilli Paneer</span> <span class="dots"></span> <span class="text-gold">₹320</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3>Main Course</h3>
+                        <p class="category-desc">A symphony of hearty and satisfying flavours.</p>
+                        <ul class="menu-list">
+                            <li><span>Chettinad Chicken Risotto</span> <span class="dots"></span> <span class="text-gold">₹520</span></li>
+                            <li><span>Signature Woodfire Pizza</span> <span class="dots"></span> <span class="text-gold">₹480</span></li>
+                            <li><span>Slow-Cooked Mutton Rogan Josh</span> <span class="dots"></span> <span class="text-gold">₹610</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3>Beverages</h3>
+                        <p class="category-desc">Sip into the mood with our crafted drinks.</p>
+                        <ul class="menu-list">
+                            <li><span>The Golden Elixir (Signature)</span> <span class="dots"></span> <span class="text-gold">₹450</span></li>
+                            <li><span>Smoked Whiskey Sour</span> <span class="dots"></span> <span class="text-gold">₹550</span></li>
+                            <li><span>Berry Blast Mocktail</span> <span class="dots"></span> <span class="text-gold">₹280</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-outline">Explore Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews / Social Proof -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <div class="reviews-header slide-up">
+                    <div class="rating-box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>4.1 / 5</h3>
+                        <p>Based on 571+ Reviews</p>
+                    </div>
+                    <div class="reviews-title text-center">
+                        <h2 class="section-title">What Our Guests Say</h2>
+                        <div class="title-divider"></div>
+                    </div>
+                </div>
+                
+                <div class="testimonials-grid slide-up">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Yummy food & cool atmosphere. Express service. Definitely coming back with more friends."</p>
+                        <div class="reviewer">
+                            <div class="avatar">S</div>
+                            <div class="reviewer-info">
+                                <h4>Sanjay K.</h4>
+                                <span>Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Ambience matches metro city vibes. A much-needed high-end premium spot in Avinashi!"</p>
+                        <div class="reviewer">
+                            <div class="avatar">P</div>
+                            <div class="reviewer-info">
+                                <h4>Priya R.</h4>
+                                <span>Food Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Every dish was beautifully presented and full of flavour. The signature cocktails are a must-try."</p>
+                        <div class="reviewer">
+                            <div class="avatar">V</div>
+                            <div class="reviewer-info">
+                                <h4>Vikram M.</h4>
+                                <span>Regular Guest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header text-center slide-up">
+                    <span class="subtitle">Visual Story</span>
+                    <h2 class="section-title">Glimpses of The Long Story</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item slide-up">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop" alt="Food at The Long Story" id="img-gal-1">
+                        <div class="gallery-caption"><h3>Food</h3></div>
+                    </div>
+                    <div class="gallery-item slide-up" style="transition-delay: 0.1s;">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Drinks at The Long Story" id="img-gal-2">
+                        <div class="gallery-caption"><h3>Drinks</h3></div>
+                    </div>
+                    <div class="gallery-item slide-up" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1000&auto=format&fit=crop" alt="Ambience at The Long Story" id="img-gal-3">
+                        <div class="gallery-caption"><h3>Ambience</h3></div>
+                    </div>
+                    <div class="gallery-item slide-up" style="transition-delay: 0.3s;">
+                        <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=1000&auto=format&fit=crop" alt="Night Vibe at The Long Story" id="img-gal-4">
+                        <div class="gallery-caption"><h3>Night Vibe</h3></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation" class="reservation-section">
+            <div class="container reservation-container slide-up">
+                <div class="reservation-content">
+                    <h2 class="section-title">Reserve Your Table Now</h2>
+                    <p>Experience the finest dining in Avinashi. Book ahead to secure your spot for a memorable story.</p>
+                    
+                    <div class="contact-info-large">
+                        <i class="fas fa-phone-alt text-gold"></i>
+                        <span>089404 97405</span>
+                    </div>
+                    
+                    <a href="tel:08940497405" class="btn btn-primary btn-large">Call Now to Reserve</a>
+                </div>
+                
+                <div class="reservation-form-wrapper">
+                    <h3>Request a Booking</h3>
+                    <form class="reservation-form" id="resForm" onsubmit="event.preventDefault(); alert('Booking Request Sent!');">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Number of Guests</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Confirm Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Details Section -->
+        <section id="location" class="location-section slide-up">
+            <div class="container">
+                <div class="location-grid">
+                    <div class="location-details">
+                        <h2 class="section-title">Visit Us</h2>
+                        <div class="title-divider left"></div>
+                        
+                        <div class="info-block">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text">
+                                <h4>Address</h4>
+                                <p>Velaythapalayam, 272/2 Pirivu, Komarapalayam, Avinashi, Tamil Nadu – 641654</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div class="info-text">
+                                <h4>Timings</h4>
+                                <p>Open Daily | Closes at 11 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="features-tags">
+                            <span class="tag"><i class="fas fa-utensils"></i> Dine-in available</span>
+                            <span class="tag"><i class="fas fa-car-side"></i> Drive-through available</span>
+                            <span class="tag x-tag"><i class="fas fa-ban"></i> No delivery</span>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3ba8cf702d7eb419%3A0xe5a3c18b76ce845b!2sAvinashi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo text-gold">The Long Story.</a>
+                <p>Where every meal becomes a story. A premium lifestyle dining and nightlife destination.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Story</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#menu">Menu Highlights</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reservation">Reservations</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone text-gold"></i> 089404 97405</li>
+                    <li><i class="fas fa-envelope text-gold"></i> hello@thelongstory.com</li>
+                    <li><i class="fas fa-map-marker-alt text-gold"></i> Avinashi, Tamil Nadu 641654</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 The Long Story. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#reservation" class="btn btn-primary d-block text-center">Reserve Now</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
